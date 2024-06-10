@@ -54,7 +54,7 @@ After the XML Document has been loaded, it's still then up to the user to traver
 brevity in the README, an example implementation of a more advanced approach will not be provided. Instead, advanced users are encouraged
 to read the documentation comments included in the implementation itself (inside the `XML.gd` file).
 
-__________________________________________________________________________
-You may use it under the terms of the license included in this repository.
+____________________________________________________________________________
+You may use this under the terms of the license included in this repository.
 
 Please also see the license information for Godot, found here: https://godotengine.org/license/
