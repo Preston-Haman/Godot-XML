@@ -2,12 +2,12 @@
 An API to load XML files using GDScript in Godot 3.5.2.
 
 This repository contains the GDScript file for an XML Document API that I created for use with one of my projects.
-Currently, this API only allows loading the entire XML Document at once.
+Currently, this API only allows loading the entire XML Document at once, and is not intended to support all XML features.
 
 ## Getting Started
 Add the `XML.gd` file to your Godot project. Godot should now allow you to access the XML class within your own scripts.
 
-### Examples
+### Example
 Consider the following (semi-awkward) XML-like Document as the data you wish to load:
 ```xml
 <items>
@@ -45,8 +45,14 @@ ______________________
 #### Advanced Approach
 The simple approach above is sufficient for basic needs while loading String data; but, with a slightly more advanced approach, this API
 also allows for converting to specific data types while parsing the XML Document. Through subclassing `XML.Element`, and
-`XML.AttributeConverter`, as necessary, it's possible to specify the entire expected structure of the XML Document, including the data
-types and conversion logic for each XML Element, XML Attribute, and XML Element text data.
+`XML.AttributeConverter`, as necessary, it's possible to specify the entire expected structure of the XML Document (or filter it down to
+data of interest to you), including the data types and conversion logic for each XML Element, XML Attribute, and XML Element text data.
+This ultimately becomes increasingly verbose; but, the subclasses could be generated via automation tools if the definition of the
+XML Document's structure is already available.
+
+After the XML Document has been loaded, it's still then up to the user to traverse the result, as in the simple approach. For the sake of
+brevity in the README, an example implementation of a more advanced approach will not be provided. Instead, advanced users are encouraged
+to read the documentation comments included in the implementation itself (inside the `XML.gd` file).
 
 __________________________________________________________________________
 You may use it under the terms of the license included in this repository.
